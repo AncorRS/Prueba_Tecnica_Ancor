@@ -1,20 +1,26 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div  class="todo">
+  <section class="cont-form">
+ <div class="perfil"></div> 
+    <h3>Prueba técnica</h3>
+    <form class="form">
+      <label for="email">
+      
+        <div class="uno"><img id="img1" src="/assets/img/user.svg"><input id="email" type="email" name="email" placeholder="Email" required="required"></div>
+      </label>
+      
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <label for="password">
+        <div class="uno"><img id="img2" src="/assets/img/password.svg"><input id="password" type="password" name="password" placeholder="Contraseña" required="required"></div>
+      </label>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+      <div class="switch">
+        <p class="pRecordar">Recordar</p> <input type="checkbox" name="recordar" id="recordar">
+      <label for="recordar" class="boton1"></label>
+      </div>
+        
+
+      <input id="boton" type="submit" name="acceder" value="Acceder">
+      
+    </form>
+  </section>
+</div>
