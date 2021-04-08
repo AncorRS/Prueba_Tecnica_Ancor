@@ -7,7 +7,8 @@
   <section class="cont-form">
     <div class="perfil"></div> 
        <h3>Prueba técnica</h3>
-       <p>BIENVENIDO/A    {{ usuario | uppercase }}</p>
+       <p>BIENVENIDO/A:</p>
+       <p>{{ email | uppercase }}</p>
        <form class="form"  (ngSubmit)="submitForm()" novalidate>
          
          

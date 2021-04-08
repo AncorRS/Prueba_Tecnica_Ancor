@@ -86,7 +86,7 @@ nameChange(){
 
 aProductos(){
   this.setStorage();
-  this.router.navigate(['/productos', this.usuario]);  
+  this.router.navigate(['/productos', "this.ionicForm.value.email"]);  
 }
 
 setStorage(){
