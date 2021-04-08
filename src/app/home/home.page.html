@@ -1,17 +1,29 @@
-<div  class="todo">
+<ion-content>
+<div  class="todo animated fadeIn">
   <section class="cont-form">
  <div class="perfil"></div> 
     <h3>Prueba técnica</h3>
-    <form class="form">
-      <label for="email">
+    <form class="form" [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
       
+      <ion-item>  
+        <ion-icon name="person-outline" slot="start"></ion-icon><ion-label position="floating">Email</ion-label>
+        <ion-input autocomplete="on" formControlName="email" type="email" (focusout)="nameChange()"></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-icon name="bag-outline" slot="start"></ion-icon><ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="name" type="text">{{contrasena}}</ion-input>
+      </ion-item>
+
+
+      <!--<label for="email">      
         <div class="uno"><img id="img1" src="/assets/img/user.svg"><input id="email" type="email" name="email" placeholder="Email" required="required"></div>
       </label>
       
 
       <label for="password">
         <div class="uno"><img id="img2" src="/assets/img/password.svg"><input id="password" type="password" name="password" placeholder="Contraseña" required="required"></div>
-      </label>
+      </label>-->
 
       <div class="switch">
         <p class="pRecordar">Recordar</p> <input type="checkbox" name="recordar" id="recordar">
@@ -20,7 +32,32 @@
         
 
       <input id="boton" type="submit" name="acceder" value="Acceder">
-      
+  
+
     </form>
+    
   </section>
 </div>
+
+
+<div class="ion-error animated fadeIn">
+  <div id="error1">
+  <span class="error" *ngIf="isSubmitted && errorControl.email.errors?.required">
+    Tiene campos sin rellenar.
+  </span>
+  <span class="error" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+    Introduzca un email válido.
+  </span>
+  </div>
+
+  <div id="error2">
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+    Introduzca su contraseña.
+  </span>
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+    Contraseña con mínimo 5 caracteres.
+  </span>
+  </div>
+</div>
+
+</ion-content>

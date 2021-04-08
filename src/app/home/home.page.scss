@@ -52,6 +52,37 @@ form{
 
 	}
 
+.error{
+	color: red;
+	position:relative;
+}
+
+.ion-error{
+	background-color: rgb(3, 62, 117);
+	position:absolute;
+	//top:400px
+	padding-bottom: 0;
+	width: 100%;
+	//position:relative;
+	bottom:180px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+*#error1{
+	//background-color: rgb(99, 144, 97);
+	position:relative;
+	//top:400px
+}
+
+#error2{
+	//background-color: rebeccapurple;
+	position:relative;
+	//top:450px
+}	
+
 input{
 	border: none;
 	border-bottom: 1px solid #9a9a9a;
@@ -144,9 +175,50 @@ input[placeholder]{
 }
 /*************************FIN SWITCHER****************/
 
+/* ============== Animaciones =================================*/
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated_form {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
 /*****************************RESPONSIVE**************/
 
 @media screen and (max-width:960px){
+
+
+.error_div{
+	background-color:transparent;
+}	
 
 .cont-form{
 	width: 20em;
@@ -159,6 +231,7 @@ input[placeholder]{
 	flex-direction: column;
 	align-items: center;
 	margin: auto;
+	position: relative;
 }
 
 h3{
@@ -166,6 +239,8 @@ h3{
 }
 .perfil{
 	//margin-bottom: 3em;
+	position:relative;
+	top: 0px;
 	width: 7em;
 	height: 7em;
 	background-image: url("/assets/img/logo.jpg");
@@ -177,10 +252,42 @@ h3{
 	background-color: rgb(255, 255, 255);
 	//padding: 20px;
 	padding-bottom: 0;
-	width: 100%;
+	width: 110%;
+	position:relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.error{
+	color: red;
+	position:relative;
+}
+
+.ion-error{
+	background-color: rgb(3, 62, 117);
+	position:absolute;
+	//top:400px
+	padding-bottom: 0;
+	width: 100%;
+	//position:relative;
+	bottom:80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+*#error1{
+	//background-color: rgb(99, 144, 97);
+	position:relative;
+	//top:400px
+}
+
+#error2{
+	//background-color: rebeccapurple;
+	position:relative;
+	//top:450px
 }
 
 #boton{
@@ -244,6 +351,48 @@ h3{
   input[type="email"] {
 	padding-left:20px;
  }
+
+ input[type="email"]::placeholder {  
+                  
+	/* Firefox, Chrome, Opera */ 
+	padding-left: 10px; 
+} 
+
+ /* ============== Animaciones =================================*/
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated_form {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
 
 }
 

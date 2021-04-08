@@ -42,9 +42,9 @@ export class HomePage {
 
     //this.arrayIgnatius = Array.from(this.semana_santa.values());
     this.arrayIgnatius = [...this.semana_santa.keys()];
-    console.log("ARRAYIGNATIUS"+this.arrayIgnatius);
+    //console.log("ARRAYIGNATIUS"+this.arrayIgnatius);
 
-    console.log("IGNATIUS "+this.ignatius);
+    //console.log("IGNATIUS "+this.ignatius);
   }  
 
   getDate(e) {
@@ -70,6 +70,7 @@ export class HomePage {
       this.map.set(this.ionicForm.value.email,this.ionicForm.value.name );
       console.log(this.ionicForm.value);
       console.log(this.ionicForm.value.name);
+      console.log("OK. FORMULARIO CORRECTO");
       //console.log("MAP "+this.map.get());
       this.router.navigate(['/productos', this.ionicForm.value.name]);
     }
