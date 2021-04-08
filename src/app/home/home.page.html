@@ -40,21 +40,21 @@
 </div>
 
 
-<div class="ion-error animated fadeIn">
-  <div id="error1">
-  <span class="error" *ngIf="isSubmitted && errorControl.email.errors?.required">
+<div class="ion-error">
+  <div id="error1 animated fadeIn">
+  <span class="error animated fadeIn" *ngIf="isSubmitted && errorControl.email.errors?.required">
     Tiene campos sin rellenar.
   </span>
-  <span class="error" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+  <span class="error animated fadeIn" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
     Introduzca un email válido.
   </span>
   </div>
 
-  <div id="error2">
-  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.required">
+  <div id="error2 animated fadeIn">
+  <span class="error animated fadeIn" *ngIf="isSubmitted && errorControl.name.errors?.required">
     Introduzca su contraseña.
   </span>
-  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
+  <span class="error animated fadeIn" *ngIf="isSubmitted && errorControl.name.errors?.minlength">
     Contraseña con mínimo 5 caracteres.
   </span>
   </div>
