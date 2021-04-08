@@ -72,7 +72,7 @@ export class HomePage {
       console.log(this.ionicForm.value.name);
       console.log("OK. FORMULARIO CORRECTO");
       //console.log("MAP "+this.map.get());
-      this.router.navigate(['/productos', this.ionicForm.value.name]);
+      this.router.navigate(['/productos', this.ionicForm.value.email]);
     }
   }
 
