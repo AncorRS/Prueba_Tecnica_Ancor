@@ -1,10 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>PRODUCTOS</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
-<p>BIENVENIDO/A    {{ usuario | uppercase }}</p>
-<p>ESTOS SON LOS PRODUCTOS DE MI TIENDA</p>
+
+<ion-content class="todo">
+  
+
+<div  class="todo animated fadeIn">
+  <section class="cont-form">
+    <div class="perfil"></div> 
+       <h3>Prueba técnica</h3>
+       <p>BIENVENIDO/A    {{ usuario | uppercase }}</p>
+       <form class="form"  (ngSubmit)="submitForm()" novalidate>
+         
+         
+     
+   
+       </form>
+       
+     </section>
+</div>
 </ion-content>
