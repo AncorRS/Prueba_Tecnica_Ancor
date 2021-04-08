@@ -44,6 +44,8 @@ form{
 	background-image: url("/assets/img/logo.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	animation-name: move;
+    animation-duration: 4s;
 
 	}
 	.perfil:hover{
@@ -206,6 +208,14 @@ input[placeholder]{
         opacity: 1;
     }
 }
+
+@keyframes move {
+	0%   {left:0px; top:200px;}
+	25%  {left:0px; top:0px;}
+	50%  {left:0px; top:0px;}
+	75%  {left:0px; top:0px;}
+	100% {left:0px; top:0px;}
+  }
 
 .fadeIn {
     animation-name: fadeIn;
