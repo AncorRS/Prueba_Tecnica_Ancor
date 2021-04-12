@@ -1,21 +1,19 @@
-import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
+import { stringify } from '@angular/compiler/src/util';
 import { ActivatedRoute } from '@angular/router';
-//import { HomePage } from '../../home/home.page';
+
 
 @Component({
-  selector: 'app-productos',
-  templateUrl: './productos.page.html',
-  styleUrls: ['./productos.page.scss'],
+  selector: 'app-panel-usuario',
+  templateUrl: './panel-usuario.page.html',
+  styleUrls: ['./panel-usuario.page.scss'],
 })
-export class ProductosPage implements OnInit {
+export class PanelUsuarioPage implements OnInit {
 
   usuario: string;
   email:any;
 
   constructor(private activatedRoute: ActivatedRoute) { 
-    //localStorage.getItem("name");
-    //localStorage.getItem("email")
 
     this.activatedRoute.params.subscribe(data=>{
       this.usuario =  data['usuario'];
@@ -24,11 +22,10 @@ export class ProductosPage implements OnInit {
       console.log("PRODUCTOS NAME " +localStorage.getItem("name"));
       console.log("PRODCUTOS EMAIL " +localStorage.getItem("email"));
     });
-
   }
 
   ngOnInit() {
-    
+
   }
 
 }

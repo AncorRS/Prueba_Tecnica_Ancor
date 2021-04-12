@@ -1,0 +1,27 @@
+
+
+<ion-content class="todo">
+  
+
+  <div  class="todo animated fadeIn">
+    <section class="cont-form">
+      <div class="perfil"></div> 
+         <h3>Prueba técnica</h3>
+         <p>BIENVENIDO/A:</p>
+         <div class="email">
+         <p>{{ email | uppercase }}</p>
+         </div>
+         <form class="form"  (ngSubmit)="submitForm()" novalidate>
+           
+           
+       
+     
+         </form>
+         <ion-button [routerLink]="['/mi-receta']">Mi Receta</ion-button>
+       </section>
+  </div>
+
+  <ion-button [routerLink]="['/home']">Logout</ion-button>
+
+  </ion-content>
+  

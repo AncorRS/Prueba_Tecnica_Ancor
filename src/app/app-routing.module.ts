@@ -12,12 +12,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'productos/:usuario',
-    loadChildren: () => import('./pages/productos/productos.module').then( m => m.ProductosPageModule)
+    path: 'panel-usuario/:usuario',
+    loadChildren: () => import('./pages/panel-usuario/panel-usuario.module').then( m => m.PanelUsuarioPageModule)
   },
   {
-    path: 'agregar',
-    loadChildren: () => import('./pages/agregar/agregar.module').then( m => m.AgregarPageModule)
+    path: 'mi-receta',
+    loadChildren: () => import('./pages/mi-receta/mi-receta.module').then( m => m.MiRecetaPageModule)
   },
 ];
 

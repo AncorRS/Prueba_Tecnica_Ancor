@@ -3,11 +3,11 @@
   <section class="cont-form">
  <div class="perfil"></div> 
     <h3>Prueba técnica</h3>
-    <form class="form" [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
-      
+    <div class="diform">
+    <form class="form" [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>      
       <ion-item>  
         <ion-icon name="person-outline" slot="start"></ion-icon><ion-label position="floating">Email</ion-label>
-        <ion-input autocomplete="on" formControlName="email" type="email" (focusout)="nameChange()"></ion-input>
+        <ion-input autocomplete="on" formControlName="email" type="email"></ion-input>
       </ion-item>
 
       <ion-item lines="full">
@@ -15,33 +15,20 @@
         <ion-input formControlName="name" type="text">{{contrasena}}</ion-input>
       </ion-item>
 
-
-      <!--<label for="email">      
-        <div class="uno"><img id="img1" src="/assets/img/user.svg"><input id="email" type="email" name="email" placeholder="Email" required="required"></div>
-      </label>
-      
-
-      <label for="password">
-        <div class="uno"><img id="img2" src="/assets/img/password.svg"><input id="password" type="password" name="password" placeholder="Contraseña" required="required"></div>
-      </label>-->
-
       <div class="switch">
         <p class="pRecordar">Recordar</p> <input type="checkbox" name="recordar" id="recordar">
       <label for="recordar" class="boton1"></label>
       </div>
         
-
       <input id="boton" type="submit" name="acceder" value="Acceder">
-  
-
-    </form>
-    
+    </form>  
+    </div> 
   </section>
 </div>
 
 
 <div class="ion-error">
-  <div id="error1 animated fadeIn">
+  <div id="error_div animated fadeIn">
   <span class="error animated fadeIn" *ngIf="isSubmitted && errorControl.email.errors?.required">
     Tiene campos sin rellenar.
   </span>
@@ -50,7 +37,7 @@
   </span>
   </div>
 
-  <div id="error2 animated fadeIn">
+  <div id="error_div animated fadeIn">
   <span class="error animated fadeIn" *ngIf="isSubmitted && errorControl.name.errors?.required">
     Introduzca su contraseña.
   </span>
@@ -59,5 +46,11 @@
   </span>
   </div>
 </div>
+
+<div *ngIf="(!isSubmitted && !errorControl.name.errors?.minlength && !errorControl.name.errors?.required
+&& !errorControl.email.errors?.required && !errorControl.email.errors?.pattern)|| (isSubmitted && !errorControl.name.errors?.minlength && !errorControl.name.errors?.required
+  && !errorControl.email.errors?.required && !errorControl.email.errors?.pattern)">
+  <ion-img class="ok animated fadeIn"  src="/assets/img/ok1.png"></ion-img>
+  </div>
 
 </ion-content>
