@@ -6,12 +6,14 @@
     <div class="diform">
     <form class="form" [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>      
       <ion-item>  
-        <ion-icon name="person-outline" slot="start"></ion-icon><ion-label position="floating">Email</ion-label>
+        <ion-icon id="email_icon" name="person-outline" slot="start"></ion-icon>
+        <ion-label id="email_label" position="floating">Email</ion-label>
         <ion-input autocomplete="on" formControlName="email" type="email"></ion-input>
       </ion-item>
 
       <ion-item lines="full">
-        <ion-icon name="bag-outline" slot="start"></ion-icon><ion-label position="floating">Contraseña</ion-label>
+        <ion-icon id="password_icon" name="bag-outline" slot="start"></ion-icon>
+        <ion-label id="password_label" position="floating">Contraseña</ion-label>
         <ion-input formControlName="name" type="text">{{contrasena}}</ion-input>
       </ion-item>
 
